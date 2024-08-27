@@ -24,7 +24,7 @@ ENV SHOW_CATALOG_NB_TAGS 'false'
 
 COPY nginx/default.conf /etc/nginx/conf.d/default.conf
 COPY bin/90-docker-registry-ui.sh /docker-entrypoint.d/90-docker-registry-ui.sh
-COPY dist/ /usr/share/nginx/html/
-COPY favicon.ico /usr/share/nginx/html/
+COPY dist/ /usr/share/nginx/html/registry-ui/
+COPY favicon.ico /usr/share/nginx/html/registry-ui/
 
 RUN chown -R nginx:nginx /etc/nginx/ /usr/share/nginx/html/ /var/cache/nginx
